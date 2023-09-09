@@ -15,8 +15,8 @@ OAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thự
 # Gibhub
 ````
 # Register
-        #0 Register a new OAuth application
-            https://github.com/settings/applications/new
+        	#0 Register a new OAuth application
+            		https://github.com/settings/applications/new
 
 		#1 Authorizing OAuth apps Steps by steps
 			https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps
@@ -82,7 +82,7 @@ OAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thự
 ````
 # Register
     Register a new OAuth application
-    https://console.cloud.google.com/apis/dashboard?project=testoauth-397107
+    	https://console.cloud.google.com/apis/dashboard?project=testoauth-397107
 # Response data
         {
         id: '100656561075519770031',
@@ -129,13 +129,13 @@ OAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thự
     https://developers.facebook.com/apps/
 
 # Code
-	#2 Cách 1: Lấy trực tiếp access token
+	#2 Case 1: Get direct access token
 	GET 
 		https://www.facebook.com/v17.0/dialog/oauth?client_id=312083254664235&redirect_uri=http://localhost:3000/facebookRedirect&response_type=token
 
 	Response: 
 		http://localhost:3000/facebookRedirect?#access_token=EAAEb1ouI3CsBOx8cqaYgO0kwtm7hbpNgcZBSO6lXvvPiV1ubW8jAuctWWBK0onFpxVL4qjNyRmFZBFGBu3w4eVp3ZATBDfIm6x1c2cTmAQLBZAwZCW7QHl7rjFySKWv7a12UVz2vKrb0fyUn7wFtfWJMpgpGw4v6GQJ7K91lbB0GAGhwjYypLDnwGvi19jYSwRO13YLD1HffXfgyE&data_access_expiration_time=1701178619&expires_in=4981
-	#3 Cách 2: Get code first, then Exchanging Code for an Access Token
+	#3 Case 2: Get code first, then Exchanging Code for an Access Token
 
  		+ GET
  			https://www.facebook.com/v17.0/dialog/oauth?client_id=312083254664235&redirect_uri=http://localhost:3000/facebookRedirect
