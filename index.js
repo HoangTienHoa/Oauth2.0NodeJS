@@ -5,6 +5,8 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const session = require('express-session');
 const FacebookStrategy = require('passport-facebook').Strategy;
+const { v4: uuidv4 } = require('uuid');;
+const bodyParser = require('body-parser')
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -27,6 +29,7 @@ passport.deserializeUser(function(obj, cb) {
     cb(null, obj);
 });
 // End Set up Passport store user as a SESSSION
+app.use(bodyParser.urlencoded({ extended: false }));
 let userProfile = {
     id:"Need Login",
     email:"Need Login",
@@ -43,6 +46,15 @@ app.get('/error', (req, res) => res.send("error logging in"));
 
 app.get('/auth/email', function(req, res) {
     res.render('login_form');
+});
+
+app.post('/auth/email', function(req, res) {
+    userProfile = {
+        id:uuidv4(),
+        email:req.body.email,
+        displayName:req.body.displayName
+    };
+    res.redirect(`/success`);
 });
 
 // Start Github Authentication

@@ -1,5 +1,25 @@
-<form method="POST">
-    Email:<input type="text" name="email" /><br/>
-    Password:<input type="password" name="password" /><br/>
-    <input type="submit" value="Submit"/>
-</form>
+<!doctype html>
+<html>
+<head>
+<title>SignIn</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- load bulma css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- load fontawesome -->
+        <style>
+            body        { padding-top:70px; }
+            a           {width:250px;}
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="jumbotron text-center text-primary">
+            <h1><span class="fa fa-lock"></span> Login Information</h1>
+            <form method="POST">
+                Email:&nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="email" /><br/>
+                Password: <input type="password" name="password" /><br/>
+                Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="text" name="displayName" /><br/>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
