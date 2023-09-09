@@ -1,0 +1,31 @@
+{
+  "name": "Oauth2.0NodeJS",
+  "version": "1.0.0",
+  "description": "Combining OAuth 2.0 with JWT tokens. OAuth2.0 allows to authenticate users using third party services like Google, Facebook and GitHub.",
+  "main": "indexx.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoangTienHoa/Oauth2.0NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoangTienHoa/Oauth2.0NodeJS/issues"
+  },
+  "homepage": "https://github.com/HoangTienHoa/Oauth2.0NodeJS#readme",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^2.0.0"
+  }
+}
