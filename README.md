@@ -1,29 +1,27 @@
 # Oauth2.0NodeJS
-Combining OAuth 2.0 with JWT tokens. OAuth2.0 allows to authenticate users using third party services like Google, Facebook and GitHub.
+OAuth2.0 allows to authenticate users using third party services like Google, Facebook and GitHub.
 
 # Run Project
     npm i
     npm start
-
+# Information
+````
 OAuth là từ ghép của O (Open) và Auth tượng trưng cho:
-
 Authentication: xác thực người dùng.
 Authorization: cấp quyền truy cập đến tài nguyên mà người dùng hiện đang nắm giữ.
+OAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thực cho phép các ứng dụng chia sẻ một phần tài nguyên với nhau mà không cần xác thực qua username và password.
+````
 
-OAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thực cho phép các ứng dụng chia sẻ một phần tài nguyên với nhau mà không cần xác thực qua username và password như cách truyền thống từ đó giúp hạn chế được những phiền toái khi phải nhập username, password ở quá nhiều nơi hoặc đăng ký quá nhiều tài khoản mật khẩu mà chúng ta chẳng thể nào nhớ hết.
-
-
-
-
-Gibhub
+# Gibhub
+````
 # Register
-#0 Register a new OAuth application
-https://github.com/settings/applications/new
+        #0 Register a new OAuth application
+            https://github.com/settings/applications/new
 
 		#1 Authorizing OAuth apps Steps by steps
 			https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps
 
-		# Code
+# Code
 		#2 Authentication and get code. Access this link via browser to get CODE
 				GET https://github.com/login/oauth/authorize?client_id=02f2fcbcf5060af02128
 				Respone:
@@ -79,54 +77,58 @@ https://github.com/settings/applications/new
 			https://medium.com/@rustyonrampage/using-oauth-2-0-along-with-jwt-in-node-express-9e0063d911ed
 			https://github.com/danba340/oauth-github-example
 			https://www.youtube.com/watch?v=qTsqpYz5cGE&t=502s
-
-Google
-Register
-Register a new OAuth application
-https://console.cloud.google.com/apis/dashboard?project=testoauth-397107
-Response data
-{
-id: '100656561075519770031',
-displayName: 'Hoa Hoang',
-name: { familyName: 'Hoang', givenName: 'Hoa' },
-emails: [ { value: 'ht.hoa.0603@gmail.com', verified: true } ],
-photos: [
-{
-value: 'https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw=s96-c'
-}
-],
-provider: 'google',
-_raw: '{\n' +
-'  "sub": "100656561075519770031",\n' +
-'  "name": "Hoa Hoang",\n' +
-'  "given_name": "Hoa",\n' +
-'  "family_name": "Hoang",\n' +
-'  "picture": "https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw\\u003ds96-c",\n' +
-'  "email": "ht.hoa.0603@gmail.com",\n' +
-'  "email_verified": true,\n' +
-'  "locale": "en"\n' +
-'}',
-_json: {
-sub: '100656561075519770031',
-name: 'Hoa Hoang',
-given_name: 'Hoa',
-family_name: 'Hoang',
-picture: 'https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw=s96-c',
-email: 'ht.hoa.0603@gmail.com',
-email_verified: true,
-locale: 'en'
-}
-}
-
-		Code
-			https://www.loginradius.com/blog/engineering/google-authentication-with-nodejs-and-passportjs/
-
-Facebook
+````
+# Google
+````
 # Register
-#1 Register a new OAuth application
-https://developers.facebook.com/apps/
+    Register a new OAuth application
+    https://console.cloud.google.com/apis/dashboard?project=testoauth-397107
+# Response data
+        {
+        id: '100656561075519770031',
+        displayName: 'Hoa Hoang',
+        name: { familyName: 'Hoang', givenName: 'Hoa' },
+        emails: [ { value: 'ht.hoa.0603@gmail.com', verified: true } ],
+        photos: [
+        {
+        value: 'https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw=s96-c'
+        }
+        ],
+        provider: 'google',
+        _raw: '{\n' +
+        '  "sub": "100656561075519770031",\n' +
+        '  "name": "Hoa Hoang",\n' +
+        '  "given_name": "Hoa",\n' +
+        '  "family_name": "Hoang",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw\\u003ds96-c",\n' +
+        '  "email": "ht.hoa.0603@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "en"\n' +
+        '}',
+        _json: {
+        sub: '100656561075519770031',
+        name: 'Hoa Hoang',
+        given_name: 'Hoa',
+        family_name: 'Hoang',
+        picture: 'https://lh3.googleusercontent.com/a/ACg8ocJPOfvf3csRReImO4Q4cTw7t0ro25q-00lXaZtFYIDS7Gw=s96-c',
+        email: 'ht.hoa.0603@gmail.com',
+        email_verified: true,
+        locale: 'en'
+        }
+        }
 
-	# Code
+#Code
+	https://www.loginradius.com/blog/engineering/google-authentication-with-nodejs-and-passportjs/
+
+````
+
+# Facebook
+````
+# Register
+    #1 Register a new OAuth application
+    https://developers.facebook.com/apps/
+
+# Code
 	#2 Cách 1: Lấy trực tiếp access token
 	GET 
 		https://www.facebook.com/v17.0/dialog/oauth?client_id=312083254664235&redirect_uri=http://localhost:3000/facebookRedirect&response_type=token
@@ -171,8 +173,9 @@ https://developers.facebook.com/apps/
 		https://developers.facebook.com/docs/facebook-login/guides/advanced/manual-flow
 		https://medium.com/@jackrobertscott/facebook-auth-with-node-js-c4bb90d03fc0
 		https://medium.com/@rustyonrampage/using-oauth-2-0-along-with-jwt-in-node-express-9e0063d911ed
-
+````
 # Ref
-    Google Authen
-        https://www.loginradius.com/blog/engineering/google-authentication-with-nodejs-and-passportjs/
+````
+    https://www.loginradius.com/blog/engineering/google-authentication-with-nodejs-and-passportjs/
     https://medium.com/@rustyonrampage/using-oauth-2-0-along-with-jwt-in-node-express-9e0063d911ed
+````
